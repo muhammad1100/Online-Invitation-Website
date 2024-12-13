@@ -25,3 +25,39 @@
 </nav>
     </body>
     </html>
+    <!-- Slider Section (Replaces Hero Section)-->
+     <section class="relative w-full h-96 ">
+       <div id="carousel" class="relative w-full h-full overflow-hidden">
+         <!-- Slider Images -->
+        <div class="carousel-inner relative w-full h-full flex transition-transform duration-1000 ease-in-out">
+          <div class="carousel-item w-full h-full flex-shrink-0 transition-all duration-1000 ease-in-out opacity-100">
+              <img src="" alt="Slide 1" 
+            class="w-full h-full object-cover rounded-lg shadow-lg">      
+             </div>
+             <div class="carousel-item w-full h-full flex-shrink-0 transition-all duration-1000 ease-in-out opacity-0">
+                <img src="good.jpg" alt="Slide 2"
+                class="w-full h-full object-cover rounded-lg shadow-lg">
+             </div>
+             <div class="carouel-item w-full h-full flex-shrink-0 transition-all duration-1000 ease-in-out opacity-0">
+               <img src="good.jpg" alt="Slide 3"
+               class="w-full h-full object-cover rounded-lg shadow-lg">
+             </div>
+          </div>
+          <!-- Controls -->
+           <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-3 rounded-full opacity-70 hover:opacity-100 transiotion-all duration-300">
+               &#10095;
+           </button>
+           <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-gradient-to-l from-purple-500 via-pink-500 to-red-500 p-3 rounded-full opacity-70 hover:opacity-100 transition-all duration-300">
+            &#10095;
+          </button>    
+                <!-- Carousel Indicators -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                   <span class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                   </span>
+                   <span class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                   </span>
+                   <span class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                   </span>
+                </div>
+              </div>
+     </section>
