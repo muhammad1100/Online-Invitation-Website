@@ -6,17 +6,17 @@
   <title>Online Invitation Maker</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-r from-orange-300 via-orange-600 to-orange-300 font-sans">
+<body class="bg-gray-300 font-sans">
 
 <!-- Navbar -->  
-<nav class="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white py-4 shadow-lg">
+<nav class="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-900 text-white py-4 shadow-lg">
   <div class="container mx-auto flex justify-between items-center px-6">
     <!-- Left Section: Logo and Title -->
     <div class="flex items-center space-x-3">
       <!-- Logo -->
-      <img src="good.jpg" alt="Logo" class="w-10 h-10"> <!-- Replace with your logo -->
+      <img src="images/logo.jpg" alt="Logo" class="w-15 h-16 rounded-full"> <!-- Replace with your logo -->
       <!-- Title -->
-      <a href="#" class="text-2xl font-bold text-slate-500 hover:text-slate-300 transition-colors duration-300">Invitation Maker</a>
+      <a href="#" class="text-2xl font-bold text-white hover:text-red-300 transition-colors duration-300">Invitation Maker</a>
     </div>
 
     <!-- Right Section: Links -->
@@ -48,121 +48,107 @@
   </div>
 </nav>
 
-    <!-- Slider Section -->
-<section class="relative w-full h-full">
-  <div id="carousel" class="relative w-full h-full overflow-hidden  shadow-lg">
-    <!-- Slider Wrapper -->
-    <div class="carousel-inner relative w-full h-96 flex transition-transform duration-1000 ease-in-out">
-      <!-- Slide 1 -->
-      <div class="carousel-item w-full h-96 flex-shrink-0">
-        <img src="good.jpg" alt="Slide 1" class="w-full h-full object-cover ">
+<!-- Carousel Section -->
+<section id="carousel" class="py-12">
+  <div class="container mx-auto text-center">
+    <!-- Carousel -->
+    <div class="relative">
+      <div class="carousel-inner overflow-hidden">
+        <div class="carousel-item">
+          <img src="images/triall.jpg" alt="Birthday" class="w-screen h-96 object-cover rounded-lg">
+        </div>
+        <div class="carousel-item">
+          <img src="images/pexels-fu-zhichao-176355-587741.jpg" alt="Wedding" class="w-full h-96 object-cover rounded-lg">
+        </div>
+        <div class="carousel-item">
+          <img src="images/temp7.jpg" alt="Anniversary" class="w-full h-96 object-cover rounded-lg">
+        </div>
       </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item w-full h-96 flex-shrink-0">
-        <img src="good.jpg" alt="Slide 2" class="w-full h-full object-cover ">
-      </div>
-      <!-- Slide 3 -->
-      <div class="carousel-item w-full h-96 flex-shrink-0">
-        <img src="good.jpg" alt="Slide 3" class="w-full h-full object-cover">
+
+      <!-- Carousel Controls -->
+      <button id="prevButton" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg text-lg">&lt;</button>
+      <button id="nextButton" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg text-lg">&gt;</button>
+      
+      <!-- Indicators -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <span class="indicator w-4 h-4 bg-white rounded-full opacity-50"></span>
+        <span class="indicator w-4 h-4 bg-white rounded-full opacity-50"></span>
+        <span class="indicator w-4 h-4 bg-white rounded-full opacity-50"></span>
       </div>
     </div>
-  </div>
-
-  <!-- Carousel Indicators -->
-  <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
-    <button class="indicator w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 focus:outline-none" data-index="0"></button>
-    <button class="indicator w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 focus:outline-none" data-index="1"></button>
-    <button class="indicator w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 focus:outline-none" data-index="2"></button>
-  </div>
-
-  <!-- Tailwind Carousel Controls with Colors -->
-  <div class="absolute top-1/2 left-0 z-10 transform -translate-y-1/2 p-4">
-    <button class="text-white bg-gradient-to-r from-pink-500 to-purple-600 opacity-80 hover:opacity-100 p-3 rounded-full shadow-lg transition-all duration-300" id="prevButton">
-      &#8592;
-    </button>
-  </div>
-  <div class="absolute top-1/2 right-0 z-10 transform -translate-y-1/2 p-4">
-    <button class="text-white bg-gradient-to-r from-teal-400 to-blue-600 opacity-80 hover:opacity-100 p-3 rounded-full shadow-lg transition-all duration-300" id="nextButton">
-      &#8594;
-    </button>
   </div>
 </section>
 
-  
-<!-- Features -->
-<section id="features" class="py-12 ">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-semibold text-gray-900 mb-8">✨ Features</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Create Invitations Card -->
-        <div class="bg-teal-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-          <img src="wedd2.jpg" alt="Event" class="w-full h-96 rounded-lg mb-4 shadow-md">
-          <h3 class="text-2xl font-bold mb-2">🎉 Create Invitations</h3>
-          <p class="text-gray-600">Add event name, date, and type for personalized invitations.</p>
-          <button class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Start Creating</button>
-        </div>
-  
-        <!-- Choose Themes Card -->
-        <div class="bg-teal-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-          <img src="bday2.jpg" alt="Themes" class="w-full h-96 rounded-lg mb-4 shadow-md">
-          <h3 class="text-2xl font-bold mb-2">🎨 Choose Themes</h3>
-          <p class="text-gray-600">Select from Classic, Modern, or Vintage themes.</p>
-          <button class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Browse Themes</button>
-        </div>
-  
-        <!-- Preview & Download Card -->
-        <div class="bg-teal-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-          <img src="anni1.jpg" alt="Download" class="w-full h-96 rounded-lg mb-4 shadow-md">
-          <h3 class="text-2xl font-bold mb-2">📥 Preview & Download</h3>
-          <p class="text-gray-600">Preview your design and download it as an image.</p>
-          <button class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Download Now</button>
-        </div>
+
+<!-- Features Section -->
+<section id="features" class="py-12">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-semibold text-[#1F509A] mb-8">✨ Features</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Create Invitations Card -->
+      <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+        <img src="images/temp5.jpg" alt="Event" class="w-full h-96 rounded-lg mb-4 shadow-md">
+        <h3 class="text-2xl text-[#1F509A] font-bold mb-2">🎉 Create Invitations</h3>
+        <p class="text-[#1F509A]">Add event name, date, and type for personalized invitations.</p>
+        <button class="mt-4 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Start Creating</button>
+      </div>
+      <!-- Choose Themes Card -->
+      <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+        <img src="images/temp3.webp" alt="Themes" class="w-full h-96 rounded-lg mb-4 shadow-md">
+        <h3 class="text-2xl text-[#1F509A] font-bold mb-2">🎨 Choose Themes</h3>
+        <p class="text-[#1F509A]">Select from Classic, Modern, or Vintage for your beautiful themes.</p>
+        <button class="mt-4 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Browse Themes</button>
+      </div>
+      <!-- Preview & Download Card -->
+      <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+        <img src="images/temp6.jpg" alt="Download" class="w-full h-96 rounded-lg mb-4 shadow-md">
+        <h3 class="text-2xl text-[#1F509A] font-bold mb-2">📥 Preview & Download</h3>
+        <p class="text-[#1F509A]">Preview your design and download it as an image.</p>
+        <button class="mt-4 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Download Now</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Templates Section -->
-<section id="templates" class="py-12 ">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">Templates for Inspiration 🎨</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Birthday Template -->
-         <a href="form.html">
-        <div class="bg-teal-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
-          <img src="bday1.jpg" alt="Birthday Template" class="w-full h-64 object-cover mb-4 rounded-lg">
+
+<!-- Templates Section -->
+<section id="templates" class="py-12">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-[#1F509A]">Templates for Inspiration 🎨</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Birthday Template -->
+      <a href="form.html">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+          <img src="images/bday1.jpg" alt="Birthday Template" class="w-full h-64 object-cover mb-4 rounded-lg">
           <h3 class="text-xl font-semibold mb-2 text-purple-600">🎉 Birthday Party</h3>
           <p class="text-gray-700 mb-4">Celebrate your special day with a personalized birthday invitation template.</p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full transform hover:scale-105 hover:bg-blue-600 transition-all duration-300" onclick="useTemplate('Birthday Party', 'bday_template.jpg')">Use Template</button>
-        </div>
-        </a>
-        
-        <!-- Wedding Template -->
-         <a href="form.html">
-        <div class="bg-teal-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
-          <img src="wedd3.jpg" alt="Wedding Template" class="w-full h-64 object-cover mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2 text-pink-600">💍 Wedding Invitation</h3>
-          <p class="text-gray-700 mb-4">Elegant and romantic wedding invitation design to suit your dream wedding.</p>
-          <button class="bg-pink-500 text-white px-4 py-2 rounded-lg w-full transform hover:scale-105 hover:bg-pink-600 transition-all duration-300" onclick="useTemplate('Wedding Invitation', 'wedd_template.jpg')">Use Template</button>
+          <button class="bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 text-white px-4 py-2 rounded-lg w-full transform hover:scale-105 hover:bg-blue-600 transition-all duration-300" onclick="useTemplate('Birthday Party', 'bday_template.jpg')">Use Template</button>
         </div>
       </a>
-        
-        <!-- Anniversary Template -->
-         <a href="form.html">
-        <div class="bg-teal-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
-          <img src="anni1.jpg" alt="Anniversary Template" class="w-full h-64 object-cover mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2 text-red-600">❤️ Anniversary Invitation</h3>
-          <p class="text-gray-700 mb-4">Cherish your love with a beautiful anniversary invitation design.</p>
-          <button class="bg-red-500 text-white px-4 py-2 rounded-lg w-full transform hover:scale-105 hover:bg-red-600 transition-all duration-300" onclick="useTemplate('Anniversary Invitation', 'form.html')">Use Template</button>
+      <!-- Wedding Template -->
+      <a href="form.html">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+          <img src="images/temp.jpg" alt="Wedding Template" class="w-full h-64 object-cover mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2 text-purple-600">💍 Wedding</h3>
+          <p class="text-gray-700 mb-4">Create an elegant wedding invitation using our customizable templates.</p>
+          <button class="bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 text-white px-4 py-2 rounded-lg w-full transform hover:scale-105 hover:bg-blue-600 transition-all duration-300" onclick="useTemplate('Wedding', 'wedd_template.jpg')">Use Template</button>
         </div>
-        </a>
-        
-      </div>
+      </a>
+      <!-- Anniversary Template -->
+      <a href="form.html">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+          <img src="images/temp2.png" alt="Anniversary Template" class="w-full h-64 object-cover mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2 text-purple-600">💖 Anniversary</h3>
+          <p class="text-gray-700 mb-4">Commemorate your love with a beautiful anniversary invitation template.</p>
+          <button class="bg-gradient-to-r from-blue-800 via-blue-600 to-blue-800 text-white px-4 py-2 rounded-lg w-full transform hover:scale-105 hover:bg-blue-600 transition-all duration-300" onclick="useTemplate('Anniversary', 'anni_template.jpg')">Use Template</button>
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-<footer class="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white py-10">
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-900 text-white py-10">
   <div class="container mx-auto text-center">
     <!-- Logo or Brand Name -->
     <div class="mb-6">
@@ -199,67 +185,37 @@
   </div>
 </footer>
 
-  
-  
-  
-  </body>
-  </html>
+<!-- Script to Handle Carousel -->
+<script>
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
+  const carouselItems = document.querySelectorAll('.carousel-item');
+  const indicators = document.querySelectorAll('.indicator');
+  let currentIndex = 0;
 
-  <script>
-
-<!-- Add JavaScript for hamburger functionality -->
-
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-    
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".carousel-item");
-    const totalSlides = slides.length;
-    const indicators = document.querySelectorAll(".indicator");
-    const prevButton = document.getElementById("prevButton");
-    const nextButton = document.getElementById("nextButton");
-
-    // Function to change slide
-    function changeSlide() {
-      const offset = -currentIndex * 100; // Moves slides horizontally by 100%
-      document.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
-
-      // Update indicators
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle("opacity-100", index === currentIndex);
-        indicator.classList.toggle("opacity-50", index !== currentIndex);
-      });
-    }
-
-    // Go to the previous slide
-    prevButton.addEventListener("click", () => {
-      currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-      changeSlide();
+  function showSlide(index) {
+    carouselItems.forEach((item, i) => {
+      item.classList.add('hidden');
+      indicators[i].classList.remove('opacity-100');
+      indicators[i].classList.add('opacity-50');
     });
+    carouselItems[index].classList.remove('hidden');
+    indicators[index].classList.add('opacity-100');
+  }
 
-    // Go to the next slide
-    nextButton.addEventListener("click", () => {
-      currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-      changeSlide();
-    });
-
-    // Handle indicator click
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener("click", () => {
-        currentIndex = index;
-        changeSlide();
-      });
-    });
-
-    // Initial setup for the first slide
-    changeSlide();
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
   });
 
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
+  });
 
-  </script>
+  // Initialize carousel
+  showSlide(currentIndex);
+</script>
+
+</body>
+</html>
